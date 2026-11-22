@@ -53,7 +53,20 @@ def check_special_word(user_text):
     else:
         return "no word to check"
           
-     
+def check_sound(user_text):
+    user_text=user_text.lower()
+    if "a" in user_text:
+        print(f"you have {user_text.count('a')} a.")
+    if "e" in user_text:
+        print(f"you have {user_text.count('e')} e.")
+    if "i" in user_text:
+        print(f"you have {user_text.count('i')} i.")
+    if "o" in user_text:
+        print(f"you have {user_text.count('o')} o.")
+    if "u" in user_text:
+        print(f"you have {user_text.count('u')} u.")
+
+
 
 def main():
     user_text=input("please enter your text:")
@@ -80,4 +93,5 @@ def main():
     #- بررسی اینکه یک کلمه خاص در جمله وجود داره یا نه
     y=check_special_word(user_text)
     print(f"result : {y}")
+    check_sound(user_text)
 main()
