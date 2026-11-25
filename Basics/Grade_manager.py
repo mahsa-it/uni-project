@@ -50,8 +50,16 @@ def show_student_grade(student_list,subject_list,grade_list):
             print(f"{subject_list[j]} : {grade_list[i][j]}")
 
 def add_grade(student_list,subject_list,grade_list):
-    grade_list=get_grade(student_list,subject_list,grade_list)
-    return grade_list
+        while True:
+            ask=input("do you want to add more grades?yes or no.:")
+            if ask == "yes":
+                break
+            elif ask == "no":
+                return grade_list
+            else:
+                print("wrong input.")
+        grade_list=get_grade(student_list,subject_list,grade_list)
+        return grade_list
 
 def remove_grade(student_list,subject_list,grade_list):
     while True:
